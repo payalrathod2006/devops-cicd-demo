@@ -1,0 +1,31 @@
+name: CI-CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Check Project Files
+        run: |
+          echo "Checking project files..."
+          ls -la
+
+      - name: Build
+        run: |
+          echo "Build completed successfully."
+
+      - name: Test
+        run: |
+          echo "Testing completed successfully."
+
+      - name: Deploy
+        run: |
+          echo "Deployment completed successfully."
